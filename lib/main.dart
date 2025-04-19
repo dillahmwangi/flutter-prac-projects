@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_prac_project/tiktaktoe.dart';
+import 'package:my_prac_project/menu_tiktak.dart';
 import 'login.dart';
 import 'tweet.dart';
 
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const Tiktaktoe()),
+            MaterialPageRoute(builder: (context) => const MenuTiktak()),
           );
         },
         child: const Text("Play Tiktaktoe"),
