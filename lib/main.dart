@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_prac_project/create_room.dart';
+import 'package:my_prac_project/join_room.dart';
 import 'package:my_prac_project/menu_tiktak.dart';
 import 'login.dart';
 import 'tweet.dart';
@@ -19,6 +21,16 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      routes: {
+        MenuTiktak.routeName: (context) => const MenuTiktak(),
+        JoinRoom.routeName: (context) => const JoinRoom(),
+        CreateRoom.routeName: (context) => const CreateRoom(),
+        // Login.routeName: (context) => const Login(),
+        // Tweet.routeName: (context) => const Tweet(),
+      },
+      // initialRoute: '/',  
+      // Set the initial route to the home page
+    
       home: const MyHomePage(title: 'MY PAGES'),
     );
   }
