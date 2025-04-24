@@ -21,11 +21,11 @@ class Button extends StatelessWidget {
             minimumSize: Size(
                width ,
              50,
-            ), // Set the width to 1/5 of the screen width
+            ),
             ),
           child: Text(text),
           
-        ),
+        ), 
       ),
     );
   }
