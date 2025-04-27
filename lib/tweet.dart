@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Tweet extends StatelessWidget {
+ static String routeName = '/tweet';
+
   const Tweet({super.key});
   
   @override
