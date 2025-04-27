@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_prac_project/create_room.dart';
 import 'package:my_prac_project/join_room.dart';
 import 'package:my_prac_project/menu_tiktak.dart';
+import 'package:my_prac_project/widgets/button.dart';
 import 'login.dart';
 import 'tweet.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         JoinRoom.routeName: (context) => const JoinRoom(),
         CreateRoom.routeName: (context) => const CreateRoom(),
         // Login.routeName: (context) => const Login(),
-        // Tweet.routeName: (context) => const Tweet(),
+        Tweet.routeName: (context) => const Tweet(),
       },
       // initialRoute: '/',  
       // Set the initial route to the home page
@@ -58,39 +59,21 @@ class _MyHomePageState extends State<MyHomePage> {
          child: Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const Tweet()),
-          );
-        },
-        child: const Text("Go to Twitter Clone"),
-      ),
-  
+      Button(onTap: () => tweet(context), text: 'Go To Twitter Clone'),
        const SizedBox(height: 16), // space between buttons
-      ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const MenuTiktak()),
-          );
-        },
-        child: const Text("Play Tiktaktoe"),
-      ),
+     Button(onTap: () => menuTiktak(context), text: "Play Tiktaktoe"),
       const SizedBox(height: 16), // space between buttons
-      ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const Login()),
-          );
-        },
-        child: const Text("Login"),
-      ),
+     Button(onTap: () => login (context), text: "Login"),
     ],
   ),
       ),
     );
   }
+  
+  tweet(BuildContext context) {}
+  
+  login(BuildContext context) {}
+  
+  menuTiktak(BuildContext context) {}
+
 }
