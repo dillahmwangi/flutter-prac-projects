@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
-  static var routeName;
-
-  const Login({super.key});
+  static String routeName = '/login';
+  const Login(BuildContext context, {super.key});
 
   @override
   Widget build(BuildContext context) {
