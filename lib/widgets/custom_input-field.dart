@@ -10,15 +10,13 @@ class InputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      child: TextField(
-        controller: controller,
-        decoration: InputDecoration(
-          // fillColor: bgColor,
-          filled: true,
-          hintText: hintText,
-        )
-      ),
+    return TextField(
+      controller: controller,
+      decoration: InputDecoration(
+        // fillColor: bgColor,
+        filled: true,
+        hintText: hintText,
+      )
     );
   }
 }
